@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default: Emerald (Gazette Green) */
+  --primary: #059669;
+  --primary-hover: #047857;
+  --primary-subtle: #ecfdf5;
+  --primary-border: #a7f3d0;
+  --primary-text: #047857;
+  --primary-contrast: #ffffff;
+}
+
+[data-accent="blue"] {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-subtle: #eff6ff;
+  --primary-border: #bfdbfe;
+  --primary-text: #1d4ed8;
+  --primary-contrast: #ffffff;
+}
+
+[data-accent="emerald"] {
+  --primary: #059669;
+  --primary-hover: #047857;
+  --primary-subtle: #ecfdf5;
+  --primary-border: #a7f3d0;
+  --primary-text: #047857;
+  --primary-contrast: #ffffff;
+}
+
+[data-accent="amber"] {
+  --primary: #d97706;
+  --primary-hover: #b45309;
+  --primary-subtle: #fffbeb;
+  --primary-border: #fde68a;
+  --primary-text: #b45309;
+  --primary-contrast: #ffffff;
+}
+
+[data-accent="violet"] {
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-subtle: #f5f3ff;
+  --primary-border: #ddd6fe;
+  --primary-text: #6d28d9;
+  --primary-contrast: #ffffff;
+}
+
+[data-accent="rose"] {
+  --primary: #e11d48;
+  --primary-hover: #be123c;
+  --primary-subtle: #fff1f2;
+  --primary-border: #fecdd3;
+  --primary-text: #be123c;
+  --primary-contrast: #ffffff;
+}
+
+[data-accent="neutral"] {
+  --primary: #18181b;
+  --primary-hover: #27272a;
+  --primary-subtle: #f4f4f5;
+  --primary-border: #e4e4e7;
+  --primary-text: #18181b;
+  --primary-contrast: #ffffff;
+}
+
+/* Dark Mode Tint Adjustments */
+html.dark[data-accent="blue"] {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-subtle: rgba(37, 99, 235, 0.14);
+  --primary-border: rgba(37, 99, 235, 0.35);
+  --primary-text: #93c5fd;
+  --primary-contrast: #ffffff;
+}
+
+html.dark[data-accent="emerald"] {
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --primary-subtle: rgba(5, 150, 105, 0.14);
+  --primary-border: rgba(5, 150, 105, 0.35);
+  --primary-text: #6ee7b7;
+  --primary-contrast: #022c22;
+}
+
+html.dark[data-accent="amber"] {
+  --primary: #f59e0b;
+  --primary-hover: #d97706;
+  --primary-subtle: rgba(217, 119, 6, 0.14);
+  --primary-border: rgba(217, 119, 6, 0.35);
+  --primary-text: #fcd34d;
+  --primary-contrast: #451a03;
+}
+
+html.dark[data-accent="violet"] {
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --primary-subtle: rgba(124, 58, 237, 0.14);
+  --primary-border: rgba(124, 58, 237, 0.35);
+  --primary-text: #c4b5fd;
+  --primary-contrast: #ffffff;
+}
+
+html.dark[data-accent="rose"] {
+  --primary: #f43f5e;
+  --primary-hover: #e11d48;
+  --primary-subtle: rgba(225, 29, 72, 0.14);
+  --primary-border: rgba(225, 29, 72, 0.35);
+  --primary-text: #fda4af;
+  --primary-contrast: #ffffff;
+}
+
+html.dark[data-accent="neutral"] {
+  --primary: #fafafa;
+  --primary-hover: #e4e4e7;
+  --primary-subtle: rgba(250, 250, 250, 0.1);
+  --primary-border: rgba(250, 250, 250, 0.25);
+  --primary-text: #fafafa;
+  --primary-contrast: #09090b;
+}
+
+/* Dynamic Classes */
+.bg-primary-theme {
+  background-color: var(--primary) !important;
+  color: var(--primary-contrast) !important;
+}
+
+.hover-bg-primary-theme:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.text-primary-theme {
+  color: var(--primary-text) !important;
+}
+
+.border-primary-theme {
+  border-color: var(--primary) !important;
+}
+
+.bg-subtle-theme {
+  background-color: var(--primary-subtle) !important;
+}
+
+.border-subtle-theme {
+  border-color: var(--primary-border) !important;
+}
+
+.ring-primary-theme:focus {
+  outline: none !important;
+  ring-width: 2px !important;
+  --tw-ring-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Smooth Base Transitions */
+@layer base {
+  * {
+    border-color: inherit;
+  }
+  body {
+    transition: background-color 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Hide scrollbar for clean horizontal swipe on mobile */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

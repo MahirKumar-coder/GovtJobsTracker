@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2318181b'><rect width='24' height='24' rx='6' fill='%2318181b'/><text x='12' y='16' font-size='11' font-family='sans-serif' font-weight='900' fill='white' text-anchor='middle'>GJ</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>GovJobs Tracker — Verified Government Recruitment Notices</title>
+    <meta name="description" content="Official consolidated Sarkari Naukri portal. Check eligibility, exam dates, vacancies, and application deadlines." />
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Immediate Theme Initialization (Prevents Flash) -->
+    <script>
+      (function() {
+        try {
+          const mode = localStorage.getItem('govjobs_theme_mode');
+          const accent = localStorage.getItem('govjobs_theme_accent') || 'emerald';
+          if (mode === 'dark' || (!mode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          document.documentElement.setAttribute('data-accent', accent);
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Ad Network Head Scripts -->
+    <script data-cfasync="false" src="https://abscloud.org/1/1b810e4161c35394005088e33fa2138b"></script>
+    <script async="async" data-cfasync="false" src="https://bauval.org/21/2b5329280e5800adb5d6e628efe89386"></script>
+  </head>
+  <body class="min-h-screen bg-neutral-50 dark:bg-zinc-950 text-neutral-900 dark:text-zinc-100 font-sans antialiased overflow-x-hidden selection:bg-neutral-200 dark:selection:bg-zinc-800">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Ad Network Body Scripts -->
+    <script data-cfasync="false" src="https://bauval.org/14/24400f3318ea0c89fba007f599b0830c"></script>
+  </body>
+</html>

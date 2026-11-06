@@ -1,0 +1,22 @@
+{
+  "name": "govjobs-tracker",
+  "version": "1.0.0",
+  "description": "One-stop verified Indian government job notification tracker",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix client install && npm --prefix server install",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "seed:server": "npm --prefix server run seed",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build"
+  },
+  "keywords": [
+    "sarkari-result",
+    "govt-jobs",
+    "job-tracker",
+    "india-jobs"
+  ],
+  "author": "Mahir Kumar",
+  "license": "ISC"
+}
